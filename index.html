@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/71533da1f1.js" crossorigin="anonymous"></script>
+    <title>Porfolio dinamico</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <!-- Aqui va el nombre, la profesion y la barra de busqueda -->
+            <div class="logo">
+                <h1>Yann Poirot</h1>
+                <p>Desarrollador web</p>
+            </div>
+
+            <form action="">
+                <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="buscar">
+            </form>
+
+            <div class="categorias" id="categorias">
+                <!-- La clase activo es con la que se jugará al cambiarse de estilos al pulsrarse... -->
+                <a href="#" class="activo">Todos</a>
+                <a href="#">Perros</a>
+                <a href="#">gatos</a>
+                <a href="#">caballos</a>
+                <a href="#">ratas</a>
+
+            </div>
+
+        </header><!-- esta estructura es la que dice la libreria -->
+        <!-- Podemos crear nuestros propios atributos! -->
+        <section class="grid" id="grid">
+            <div class="item" data-categoria="gatos" data-etiquetas=" siames gato" data-descripcion="Ir a la página">
+                <div class="item-contenido">
+                    <img src="/img/gato (1).jpg">
+                </div>
+            </div>
+
+
+            <div class="item" data-categoria="gatos" data-etiquetas="saimon siames gato"
+                data-descripcion="Ir a la página">
+                <div class="item-contenido">
+                    <img src="/img/gato (2).jpg">
+                </div>
+            </div>
+
+
+            <div class="item" data-categoria="perros" data-etiquetas="chihuahua doverman"
+                data-descripcion="Ir a la página">
+                <div class="item-contenido">
+                    <img src="/img/perro (1).jpeg">
+                </div>
+            </div>
+
+
+            <div class="item" data-categoria="perros" data-etiquetas="doverman perro chihuahua"
+                data-descripcion="Ir a la página">
+                <div class="item-contenido">
+                    <img src="/img/perro (2).jpg">
+                </div>
+            </div>
+
+            <div class="item" data-categoria="perros" data-etiquetas="chihuahua perro doverman"
+                data-descripcion="Ir a la página">
+                <div class="item-contenido">
+                    <img src="/img/perro (3).jpg">
+                </div>
+            </div>
+
+
+            <div class="item" data-categoria="perros" data-etiquetas="chihuahua perro doverman"
+                data-descripcion="Ir a la página">
+                <div class="item-contenido">
+                    <img src="/img/perro (5).png">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="overlay activo" id="overlay">
+            <!-- para el pop up -->
+            <div class="contenedor-img">
+                <button id="btn-cerrar-popup"><i class="fa-solid fa-circle-xmark"></i></button>
+                <img src="img/perro (5).png">
+            </div>
+
+            <p class="descripcion">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum hic delectus, earum assumenda
+                nesciunt atque cumque exercitationem ipsa odio. Cumque, eligendi. Nobis, animi odit iusto modi non fuga
+                quas error!
+            </p>
+
+
+        </section>
+    </div>
+    <!-- primero se cargan las animaciones y luego muuri. -->
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
